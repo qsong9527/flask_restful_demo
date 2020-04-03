@@ -1,0 +1,49 @@
+Update user infomation, exclude password
+Update user infomation by uid and request json data
+---
+tags:
+  - User
+parameters:
+  - name: uid
+    in: path
+    required: true
+    type: string
+    description: user id
+  - name: body
+    in: body
+    required: true
+    schema:
+      description: user info schema
+      properties:
+        username:
+          type: string
+          description: user name
+        email:
+          type: string
+          description: user email address
+        tel:
+          type: string
+          description: user tel phone no.
+        gender:
+          type: string
+          description: 0 unknown, 1 male, 2 female
+responses:
+  200:
+    description: Update User Success.
+    schema:
+      properties:
+       id:
+         type: integer
+         description: user id
+       username:
+         type: string
+         description: user name
+       email:
+         type: string
+         description: user email address
+       tel:
+         type: string
+         description: user tel phone no.
+       gender:
+         type: string
+         description: 0 unknown, 1 male, 2 female.

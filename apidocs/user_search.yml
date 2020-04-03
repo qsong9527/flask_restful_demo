@@ -1,0 +1,29 @@
+Search user
+Search user by one or some or all among of uid name email tel gender.
+---
+tags:
+  - User
+parameters:
+  - name: uid
+    in: arguments
+    required: false
+    type: string
+    description: user id
+  - name: name
+    in: arguments
+    required: false
+    type: string
+    description: user name
+  - name: email
+    in: arguments
+    required: false
+    type: string
+    description: user email address
+  - name: tel
+    in: arguments
+    required: false
+    type: string
+    description: user tel phone no.
+responses:
+  200:
+    description: Search users success.

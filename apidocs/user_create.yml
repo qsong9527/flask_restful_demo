@@ -1,0 +1,54 @@
+Create user
+Create user by request form data
+---
+tags:
+  - User
+parameters:
+  - name: body
+    in: body
+    required: true
+    schema:
+      description: user info schema
+      required: true
+      properties:
+        username:
+          type: string
+          description: user name
+        email:
+          type: string
+          description: user email address
+        tel:
+          type: string
+          description: user tel phone no.
+        password:
+          type: string
+          description: user password
+        gender:
+          type: string
+          description: 0 unknown, 1 male, 2 female
+responses:
+ 200:
+   description: Create user success
+   schema:
+     properties:
+       id:
+         type: integer
+         description: user id
+       username:
+         type: string
+         description: user name
+       email:
+         type: string
+         description: user email address
+       tel:
+         type: string
+         description: user tel phone no.
+       password:
+         type: string
+         description: user password
+       gender:
+         type: string
+         description: 0 unknown, 1 male, 2 female
+       create_time:
+         type: string
+         description: user create time.
