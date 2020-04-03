@@ -3,7 +3,7 @@ from flasgger import swag_from
 
 class User(Resource):
 
-    @swag_from('../apidocs/user_create.yml')
+    @swag_from('../../apidocs/user_create.yml')
     def post(self, uid):
         ret_val = {
             "ret_code": "200",
@@ -11,7 +11,7 @@ class User(Resource):
         }
         return ret_val
 
-    @swag_from('../apidocs/user_delete.yml')
+    @swag_from('../../apidocs/user_delete.yml')
     def delete(self, uid):
         ret_val = {
             "ret_code": "200",
@@ -19,7 +19,7 @@ class User(Resource):
         }
         return ret_val
 
-    @swag_from('../apidocs/user_update.yml')
+    @swag_from('../../apidocs/user_update.yml')
     def put(self, uid):
         ret_val = {
             "ret_code": "200",
@@ -27,7 +27,7 @@ class User(Resource):
         }
         return ret_val
 
-    @swag_from('../apidocs/user_get.yml')
+    @swag_from('../../apidocs/user_get.yml')
     def get(self, uid):
         ret_val = {
             "ret_code": "200",
@@ -38,7 +38,7 @@ class User(Resource):
 
 class Users(Resource):
 
-    @swag_from('../apidocs/user_search.yml')
+    @swag_from('../../apidocs/user_search.yml')
     def get(self):
         ret_val = {
             "ret_code": "200",
